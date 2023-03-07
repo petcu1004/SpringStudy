@@ -31,4 +31,10 @@ public class MemoryMemberRepository implements MemberRepository{
     public List<Member> findAll() { //지금까지 저장된 회원의 id를 전부 반환해줌
         return new ArrayList<>(store.values());
     }
+
+    public void clearStore(){
+        store.clear();
+    }
+
+
 }
