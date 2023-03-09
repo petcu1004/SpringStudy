@@ -9,12 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository; //테스트할 때 같은 레퍼지를 쓰기 위해 위와 같은 코드가 아닌 이와 같은 코드로 작성하고 Test 코드도 @BeforeEach로 수정해줌
-    @Autowired
     public MemberService(MemberRepository memberRepository) { //외부에서 넣어주도록 바꾸면 테스트할 때 쓰는 것과 같음
         this.memberRepository = memberRepository;
     }
